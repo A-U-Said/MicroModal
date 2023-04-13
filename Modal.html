@@ -1,0 +1,34 @@
+<!doctype html>  
+<html lang="en">
+	
+	<head>
+		<link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" href="css/modal.css">
+	</head>
+	
+	<body>
+
+		<div id="default-popup" class="modal-popup">
+			<h2>Modal One</h2>
+			<p>Modal will close on blur or escape key</p>
+			<button onclick="Modal.hide()">Close</button>
+		</div>
+
+		<div id="second-popup" class="modal-popup angled">
+			<h2>Modal Two</h2>
+			<p>Same behaviour but with a different style</p>
+			<button onclick="Modal.hide()">Close</button>
+		</div>
+
+		<main>
+			<button onclick="Modal.show('#default-popup')">Open Modal 1</button>
+			<button onclick="Modal.show('#second-popup')">Open Modal 2</button>
+		</main>
+
+		<div class="modal-cover"></div>
+
+		<script type="text/javascript" src="js/modal.js"></script>
+
+	</body>
+	
+</html>

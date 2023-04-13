@@ -1,0 +1,60 @@
+.modal-cover {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+	visibility: hidden;
+	opacity: 0;
+	background: rgba( 0, 0, 0, 0.5 );
+}
+.modal-active .modal-cover {
+	visibility: visible;
+	opacity: 1;
+}
+.modal-popup {
+	box-sizing: border-box;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 380px;
+	height: 220px;
+	margin: -130px 0 0 -190px;
+	visibility: hidden;
+	opacity: 0;
+	z-index: 2;
+	padding: 20px;
+	background: white;
+	box-shadow: 0px 0px 20px rgba( 0, 0, 0, 0.5 );
+	border-radius: 3px;
+	transform: scale( 0.8 );
+}
+.modal-popup.angled {
+	border-radius: 0;
+	width: 600px;
+	height: 300px;
+	margin: -170px 0 0 -300px;
+	border-top-left-radius: 50px;
+	border-bottom-right-radius: 50px;
+}
+.modal-active .modal-popup-animate {
+	visibility: visible;
+	opacity: 1;
+	transform: scale( 1.1 );
+}
+.modal-popup.stack {
+	transform: scale( 1.5 );
+}
+.modal-active .modal-popup.stack {
+	transform: scale( 1.1 );
+}
+.modal-ready .modal-popup,
+.modal-ready .modal-cover {
+	transform-origin: 50% 50%;
+	transition: 0.2s all linear;
+}
+.modal-ready .modal-popup.no-transition {
+	transition: none;
+}
+
