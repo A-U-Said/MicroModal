@@ -28,7 +28,7 @@ const Modal = (() => {
 	}
 
 	const show = (selector) => {
-		popup = document.querySelector(selector);
+		popup = document.querySelector(`[data-id="${selector}" ]`);
 		popup.classList.add('modal-popup-animate');
 		
 		document.addEventListener('keyup', onDocumentKeyUp, false);

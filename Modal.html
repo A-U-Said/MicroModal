@@ -8,21 +8,21 @@
 	
 	<body>
 
-		<div id="default-popup" class="modal-popup">
+		<div class="modal-popup" data-id="123">
 			<h2>Modal One</h2>
 			<p>Modal will close on blur or escape key</p>
 			<button onclick="Modal.hide()">Close</button>
 		</div>
 
-		<div id="second-popup" class="modal-popup angled">
+		<div class="modal-popup angled" data-id="456">
 			<h2>Modal Two</h2>
 			<p>Same behaviour but with a different style</p>
 			<button onclick="Modal.hide()">Close</button>
 		</div>
 
 		<main>
-			<button onclick="Modal.show('#default-popup')">Open Modal 1</button>
-			<button onclick="Modal.show('#second-popup')">Open Modal 2</button>
+			<button onclick="Modal.show('123')">Open Modal 1</button>
+			<button onclick="Modal.show('456')">Open Modal 2</button>
 		</main>
 
 		<div class="modal-cover"></div>
